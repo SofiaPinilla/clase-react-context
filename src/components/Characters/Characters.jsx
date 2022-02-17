@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-
+import './Characters.css'
 const Characters = () => {
   const { characters, getCharacters } = useContext(GlobalContext);
   useEffect(() => {
@@ -8,13 +8,13 @@ const Characters = () => {
   }, []);
   const character = characters.map((character) => {
     return (
-      <div key={character.id}>
+      <div className="character" key={character.id}>
         <h1>{character.name}</h1>
         <img src={character.image} />
       </div>
     );
   });
-  return <div>{character}</div>;
+  return <div className="characters">{character}</div>;
 };
 
 export default Characters;
