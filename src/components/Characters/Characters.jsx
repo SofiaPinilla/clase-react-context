@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import './Characters.css'
+import './Characters.scss'
 const Characters = () => {
   const { characters, getCharacters } = useContext(GlobalContext);
   useEffect(() => {
@@ -14,7 +14,9 @@ const Characters = () => {
       </div>
     );
   });
-  return <div className="characters">{character}</div>;
+  return <div className="characters">
+   
+    {character}</div>;
 };
 
 export default Characters;

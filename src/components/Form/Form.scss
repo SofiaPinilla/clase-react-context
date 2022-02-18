@@ -1,0 +1,41 @@
+@import "../../colors.scss";
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  form {
+    background-color: $background;
+    width: 20%;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh;
+    justify-content: space-around;
+    input {
+      all: unset;
+      background-color: $aquaMarine;
+      padding: 1em;
+      border-radius: 1em;
+      color: $letterColor;
+    }
+    button {
+      all: unset;
+      background-color: $pink;
+      padding: 1em;
+      border-radius: 1em;
+      color: $letterColor;
+      cursor: pointer;
+    }
+  }
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box {
+  @include transform(rotate(30deg));
+}

@@ -1,0 +1,18 @@
+@import '../../colors.scss';
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  background-color: $primaryColor;
+  color: $letterColor;
+  span{
+    cursor: pointer;
+  }
+  div span {
+    margin: 1em;
+  }
+  a{
+      all:unset
+  }
+}
